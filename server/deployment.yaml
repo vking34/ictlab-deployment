@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ictlab-server-deploy
+  labels:
+    app: ictlab-server
+  annotations:
+spec:
+  selector:
+    matchLabels:
+      app: ictlab-server
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: ictlab-server
+    spec:
+      containers:
+      - name: ictlab-server
+        image: vking34/ictlab-server:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8088
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "150m"
