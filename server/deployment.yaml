@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: ictlab-server
-        image: vking34/ictlab-server:ff1f5cd
+        image: vking34/ictlab-server:4f7fe5a
         imagePullPolicy: Always
         ports:
         - containerPort: 8088
