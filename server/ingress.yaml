@@ -11,4 +11,4 @@ spec:
       - path: /
         backend:
           serviceName: ictlab-server
-          servicePort: 8088
+          servicePort: 3000
