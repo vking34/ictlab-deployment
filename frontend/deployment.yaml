@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: ictlab-frontend
-        image: vking34/ictlab-frontend:39a584a
+        image: vking34/ictlab-frontend:9b93036
         imagePullPolicy: Always
         ports:
         - containerPort: 80
