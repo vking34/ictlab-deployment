@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/vking34/ictlab-deployment.git
     targetRevision: HEAD
-    path: fontend/
+    path: frontend/
     directory:
       recurse: true
   destination:
