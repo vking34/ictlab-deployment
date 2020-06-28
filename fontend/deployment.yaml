@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ictlab-server-deploy
+  name: ictlab-frontend-deploy
   labels:
-    app: ictlab-server
+    app: ictlab-frontend
   annotations:
 spec:
   selector:
     matchLabels:
-      app: ictlab-server
+      app: ictlab-frontend
   replicas: 2
   strategy:
     type: RollingUpdate
@@ -18,14 +18,14 @@ spec:
   template:
     metadata:
       labels:
-        app: ictlab-server
+        app: ictlab-frontend
     spec:
       containers:
-      - name: ictlab-server
-        image: vking34/ictlab-server:39a584a
+      - name: ictlab-frontend
+        image: vking34/ictlab-frontend:39a584a
         imagePullPolicy: Always
         ports:
-        - containerPort: 3000
+        - containerPort: 80
         resources:
           limits:
             memory: "512Mi"
